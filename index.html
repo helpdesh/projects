@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio- easy tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"  />
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="./images/LOGO 2.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#"header>Home</a></li>
+                <li><a href="#about">About</a></li>
+                <!-- <li><a href="#services">Services</a></li> -->
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()" ></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>STUDENT</p>
+            <h1>Hi, I,m <span>Aryan Sharma</span></h1>
+        </div>
+        
+    </div> 
+</div>
+<!-- ------------------about---------------> 
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1"> 
+                <img src="images/about -photo.jpeg">
+            </div>
+            <div class="about-col-2"> 
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero accusamus assumenda optio harum vel. Error, reprehenderit quia molestiae quos cumque aperiam obcaecati harum sit veritatis dolores iste, alias non quaerat.
+                
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')" >Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing web/app interfaces</li>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>App Development</span><br>building Andriod/ios apps</li>
+                        
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                       <li>## fill it later ##</li>
+                        
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Class 10th</span><br>Vanasthali Public School- 87%</li>
+                        <li><span>Class 12th</span><br>Vanasthali Public School- 91%</li>
+                        <li><span>Competative exam</span><br>JEE RANK -24625</li>
+                        <li><span>BTECH</span><br>GGSIPU(USICT) -8CGPA</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------portfolio-------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <div class="work1">
+                
+                <img src="images/pexels-markusspiske-242204.jpg" >
+            </div>
+                <div class="layer">
+                    <h3>Digital Clock</h3>
+                    <p>a clock in which the hours, minutes, and sometimes seconds are indicated by digits, rather than by hands on a dial.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                
+            </div>
+            <div class="work">
+                <div class="work2">
+                <img src="images/editors-keys-h63fLedowK8-unsplash.jpg">
+            </div>
+                <div class="layer">
+                    <h3>Calculator</h3>
+                    <p> can perform basic arithmetic such as addition, subtraction, multiplication and division.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <div class="work3">
+                <img src="images/still-life-graphic-design-office.jpg" >
+            </div>
+                <div class="layer">
+                    <h3>Clone Website</h3>
+                    <p>cyber criminals create nearly identical websites to mirror original ones out of malicious motives</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+<!-- ------------------Contact---------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>  aryansharma7467@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>  +917467856724</p>
+                <div class="social-icons">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="" download class="btn btn2">Download CV </a>
+            </div>
+            <div class="contact-right">
+                <form  name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message" ></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ Aryan. Made with <i class="fas fa-heart"></i></p>
+        </div>
+    </div>  
+</div>
+
+
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname)
+    {
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents)
+        {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz0kwWkpcHOrm_tWLMtfwzghB6AHiBXr1rrLqJy6fYauL-TnjXLlvJiqqzlws8px_XdpQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg= document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+
+    }
+    
+    
+  </script>
+</body>
+</html>
+ 
